@@ -67,7 +67,8 @@ class NidlemanVunshAlgo():
 
     
     
-    def Nidleman_Vunsh(self, x, y, gap_penalty = 2,  mismatсh_penalty = 3, match_penalty = -1, pbar=None):
+    def Nidleman_Vunsh(self, x, y, mismatсh_penalty = 2, match_penalty = -1, pbar=None):
+        gap_penalty = 0.5 * mismatch_penalty 
         F = self.count_matrix(x,y, gap_penalty, match_penalty, mismatсh_penalty, pbar)
         self.F = F
         aligment_x = ''
